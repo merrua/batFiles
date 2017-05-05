@@ -2,8 +2,9 @@
 :: Author: mer
 :: Purpose: runs both windows net stats commands
 
-net stats workstation
-net stats server
+type NUL > C:\Temp\netstatsLog.txt
+type NUL > C:\Temp\netstatsServerLog.txt
 
-REM wait for input
-PAUSE
+net stats workstation  > C:\Temp\netstatsLog.txt
+net statistics server > C:\Temp\netstatsServerLog.txt
+
